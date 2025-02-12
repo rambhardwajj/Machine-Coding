@@ -52,4 +52,8 @@ const limiter = new RateLimiter(3, 3000);
 console.log(limiter.allowRequest("user1")); // true
 console.log(limiter.allowRequest("user1")); // true
 console.log(limiter.allowRequest("user1")); // true
-console.log(limiter.allowRequest("user1")); 
+console.log(limiter.allowRequest("user1")); // false
+
+setTimeout(() => {
+    console.log(limiter.allowRequest("user1")); // true (after time window resets)
+}, 11000);
