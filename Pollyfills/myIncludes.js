@@ -20,3 +20,6 @@ console.log([1, 2, 3].myIncludes(2)); // true
 console.log([1, 2, 3].myIncludes(4)); // false
 console.log([NaN, 2, 3].myIncludes(NaN)); // true
 console.log([1, 2, 3].myIncludes(2, -1)); // false
+
+const arr = [10, 20, 30, 40, 50];
+console.log(arr.includes(30, -2)); // false (starts searching from index 3)
