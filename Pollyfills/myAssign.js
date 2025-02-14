@@ -3,7 +3,6 @@ if( !Object.myAssign){
         if(target == null) throw new TypeError("target cannot be null as we cannot convert null/undefined to an object. Pass {} as target in the calling function.")
         
         let res = Object(target);
-
         for( let source of sources){
             if( source != null){
                 // In the object there can be keys / Symbols / Inherited properties
