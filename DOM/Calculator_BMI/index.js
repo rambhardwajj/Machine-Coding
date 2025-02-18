@@ -4,9 +4,6 @@ const buttons = document.querySelectorAll(".grid-button")
 // console.log(buttons)
 
 
-function isNumberString(str) {
-    return !isNaN(str) && str.trim() !== "";
-}
 function getRes( a, b , op){
     // console.log("getRes " + a,b,op)
     switch(op){
@@ -24,7 +21,7 @@ buttons.forEach(element => {
             if(val=='+' || val=='-' || val=='/' || val=='*' && displayArea.value.length>0){
                 let lastChar =  displayArea.value[displayArea.value.length-1];
                 if(lastChar=='+'||lastChar=='-'||lastChar=='*'||lastChar=='/'){
-                    console.log(lastChar);
+                    // console.log(lastChar);
                     displayArea.value = displayArea.value.slice(0,-1);
                 }
             }
@@ -47,7 +44,7 @@ buttons.forEach(element => {
                 if( currVal[i]<=9 && currVal[i]>=0){
                     currNum+= currVal[i];
                 }
-                if(val=='+'||val=='-'||val=='/'||val=='*'   ){
+                if(val=='+'||val=='-'||val=='/'||val=='*'){
                     
                     if( num1 == undefined){
                         num1 = Number(currNum) ;
@@ -71,3 +68,7 @@ buttons.forEach(element => {
         }
     })
 });
+
+function isNumberString(str) {
+    return !isNaN(str) && str.trim() !== "";
+}
