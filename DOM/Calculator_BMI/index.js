@@ -45,7 +45,6 @@ buttons.forEach(element => {
                     currNum+= currVal[i];
                 }
                 if(val=='+'||val=='-'||val=='/'||val=='*'){
-                    
                     if( num1 == undefined){
                         num1 = Number(currNum) ;
                         currNum = ''
@@ -66,6 +65,7 @@ buttons.forEach(element => {
             displayArea.value = res;
             
         }
+        // displayArea.value = ''
     })
 });
 
