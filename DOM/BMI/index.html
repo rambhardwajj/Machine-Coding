@@ -6,50 +6,115 @@
     <title>Document</title>
 </head>
 <style>
-    body{
-       display: flex;
-       justify-content: center;
-       align-items: center; 
-       background-color: rgb(75, 105, 95);
+   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #4B695F;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
     }
-    .container{
-        margin: 100px;
-        border: 2px solid grey;
-        padding: 10px;
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .container {
+        width: 250px;
+        padding: 20px;
+        border-radius: 12px;
+        background: #7FFA92;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .display-card {
+        background: white;
+        width: 180px;
+        height: 60px;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: rgb(127, 250, 146);
-        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
     }
-    .range-area{
+
+    .range-area {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 200px;
     }
-    .display-card{
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
+
+    input[type="range"] {
+        
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        background: #ddd;
+        outline: none;
+        transition: 0.3s;
+        margin: 10px 0;
     }
+
+   
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+        background: #457b9d;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 5px 0;
+        font-size: 14px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .submit {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background: #1d3557;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 15px;
+    }
+
+    .submit:hover {
+        background: #457b9d;
+    }
+
 </style>
 <body>
+    <h2>BMI Calculator</h2>
     <div class="container">
-        <h1>BMI Calculator</h1>
         <div class="display-card">    
-            <span class="answer"> Your BMI</span>
-            <span class="grade"> Your Grade </span>
+            <span id="ans" class="answer"> Your BMI</span>
+            <span id="grad" class="grade"> Your Grade </span>
         </div>
         <div>
             <div class="range-area">
                 <input type="range" min="0" max="500" name="weight" id="wt">
-                <span>Weight </span>
+                <ul id="wtval"></ul>
                 <input type="range" min="0" max="300" name="height" id="ht">
-                <span>Height </span>
+                <ul id="htval"> </ul>
             </div>
         </div>
+        <button id="btn" class="submit">Calc BMI</button>
     </div>
 
     <script src="index.js"></script>
