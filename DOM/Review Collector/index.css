@@ -127,7 +127,7 @@ body {
 .revs{
     display: flex;
     justify-content: space-around;
-    height: 70vh;
+    max-height: 100vh;
 }
 .review-form{
     width: 40%;
@@ -158,6 +158,8 @@ body {
     padding:20px;
     border-radius: 10px;
     background-color: black;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 .button {
     width: 30%;
@@ -176,6 +178,26 @@ body {
     transform: translateY(-2px);
 }
 .button:active {
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
-  
+
+.js-rec-review{
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #171717;
+    width: 90%;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.js-para{
+    padding: 10px  10px 10px 0px ;
+    font-weight: bold;
+}
+.js-rec-review:hover{
+    transform: translate(10px) scale(1.1)
+}
+.js-name{
+    font-style: italic;
+}
