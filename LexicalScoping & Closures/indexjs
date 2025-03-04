@@ -1,0 +1,27 @@
+// let fname = 'ram'
+// console.log('value of fname is', fname)
+// function sayName() {
+//     console.log(`Inside sayname fn the bvalue of fname is`, fname)
+// }
+// sayName();
+
+// let fname = 'ram'
+// function sayName(){
+
+//     console.log('In Sayname', fname);
+// }
+
+// sayName()
+
+let fname = 'ram'
+
+function f(){
+    let lname = "fdsfds"
+
+    function inner(){
+        console.log(fname, lname)
+        return 
+    }
+    inner()
+}
+f()

@@ -1,3 +1,5 @@
+
+
 Array.prototype.myReduce = function(callback, initialValue) {
     if (typeof callback !== "function") {
         throw new TypeError(`${callback} is not a function`);
