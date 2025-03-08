@@ -72,3 +72,58 @@
 // class ABC{
 // }
 // console.log( typeof ABC)
+
+// const numbers = [10, 20, 5, 40, 30];
+
+// console.log(Math.max.call( null, ...numbers ))
+
+
+//---------------------------------
+// const obj = {
+//     name: "CodeMaster",
+//     greet: function () {
+//       console.log(`Hello, ${this.name}!`); // CodeMaster
+//       setTimeout( ()=> {
+//             console.log(`Timeout: Hello, ${this.name}!`); // undef
+//       }, 1000);
+//     },
+//   };
+  
+//   obj.greet();
+   
+// -------------------------------------------
+
+// var length = 10;
+
+// function callback() {
+//     console.log(this)
+//   console.log(this.length);
+// }
+
+// const obj = {
+//   length: 5,
+//   method: function () {
+//     let arr = [1, 2, 3];
+//     arr.forEach(callback);
+//   },
+// };
+
+// obj.method();
+
+// callback()
+
+
+const person = {
+  name: "Bob",
+  greet: function (greeting) {
+      console.log(`${greeting}, I am ${this.name}`);
+  },
+};
+
+const anotherPerson = { name: "Charlie" };
+
+person.greet.call(anotherPerson, "Hello");
+person.greet.apply(anotherPerson, ["Hi"]);
+const boundFn = person.greet.bind(anotherPerson, "Hey");
+boundFn();
+
